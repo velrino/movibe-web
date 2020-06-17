@@ -15,7 +15,7 @@ const routes: Routes = [
         path: '',
         component: AdminComponent,
         children: [
-            { path: 'home', component: AdminHomePage },
+            { path: '', component: AdminHomePage },
         ]
     },
     { path: '', redirectTo: 'home', pathMatch: 'full' }
