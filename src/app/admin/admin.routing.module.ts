@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+// Components
 import { AdminComponent } from './admin.component';
+import { AdminFooterComponent } from './components/footer/footer.component';
+import { AdminNavbarComponent } from './components/navbar/navbar.component';
+import { AdminSidebarComponent } from './components/sidebar/sidebar.component';
+
+// Pages
 import { AdminHomePage } from './pages/home/home.page';
 
 const routes: Routes = [
@@ -15,13 +21,16 @@ const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
-export const AdminPages = [
+export const AdminComponents = [
     AdminComponent,
-    AdminHomePage,
-];
+    AdminFooterComponent,
+    AdminNavbarComponent,
+    AdminSidebarComponent,
+]
 
-export const AdminBootstrap = [
-    AdminComponent,
+export const AdminPages = [
+    ...AdminComponents,
+    AdminHomePage,
 ];
 
 @NgModule({
