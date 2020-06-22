@@ -23,8 +23,12 @@
                         <tr *ngFor="let item of data">
                             <td *ngFor="let index of baseColumnsToArray()" class="truncate-line">{{item[index]}}</td>
                             <td class="w-10">
-                                <button type="button" class="btn btn-success">Success</button>
-                                <button type="button" class="btn btn-danger">Danger</button>
+                                <button type="button" class="btn btn-success clickable mr-2">
+                                    <i class="fa fa-pencil-alt" aria-hidden="true"></i>
+                                </button>
+                                <button type="button" class="btn btn-danger clickable ml-2">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </button>
                             </td>
                         </tr>
                     </tbody>
