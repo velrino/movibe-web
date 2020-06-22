@@ -12,6 +12,7 @@ import { AdminNavbarComponent } from './components/navbar/navbar.component';
 import { AdminSidebarComponent } from './components/sidebar/sidebar.component';
 
 // Pages
+import { AdminBalladPage } from './pages/ballad/ballad.page';
 import { AdminBalladsPage } from './pages/ballads/ballads.page';
 import { AdminHomePage } from './pages/home/home.page';
 import { AdminLoginPage } from './pages/login/login.page';
@@ -26,6 +27,7 @@ const routes: Routes = [
             {
                 path: 'ballads', children: [
                     { path: '', component: AdminBalladsPage },
+                    { path: ':id', component: AdminBalladPage },
                 ]
             },
         ]
@@ -51,6 +53,7 @@ export const AdminPages = [
     ...AdminComponents,
     AdminHomePage,
     AdminLoginPage,
+    AdminBalladPage,
     AdminBalladsPage
 ];
 
