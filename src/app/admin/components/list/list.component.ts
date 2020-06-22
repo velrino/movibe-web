@@ -7,6 +7,7 @@ import { AlertComponentEnum, AlertComponentTypesEnum } from 'src/app/shared/comp
 @Injectable()
 export class ListComponent {
     constructor(private _apiService: ApiService) { }
+    columns: {} = {}
     component: string;
     currentPage: number = 1;
     data: any[] = [];
@@ -85,5 +86,13 @@ export class ListComponent {
         } catch (e) {
             this.baseAlert(this.alerts.api.delete.error, this.alertComponentEnum.types.error);
         }
+    }
+
+    baseColumnsToArray() {
+        return Object.keys(this.columns);
+    }
+
+    baseGetColumn(column: string) {
+        return this.columns[column];
     }
 }
