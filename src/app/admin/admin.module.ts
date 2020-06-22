@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import { AdminPages, AdminRoutingModule } from './admin.routing.module';
 // Providers
@@ -12,7 +14,9 @@ import { AuthGuestService } from 'src/app/shared/services/auth/auth-guest.servic
     imports: [
         CommonModule,
         AdminRoutingModule,
-        HttpClientModule
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule
     ],
     providers: [AuthGuardService, AuthGuestService]
 })

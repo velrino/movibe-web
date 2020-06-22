@@ -1,0 +1,31 @@
+<form *ngIf="component.form" [formGroup]="component.form">
+    <div class="card-body">
+        <div class="form-group" *ngFor="let item of getObjectKeys()">
+            <label for="exampleInputEmail1">{{ baseRenderGet(item).label }}</label>
+            <ng-container [ngSwitch]="true">
+                <input *ngSwitchCase="baseRendeTypeIsText(item)" [formControlName]="item"
+                    [placeholder]="baseRenderGet(item).placeholder" NAME="name" type="text" class="form-control"
+                    id="inputSuccess1" required />
+                <select *ngSwitchCase="baseRendeTypeIsSelect(item)" class="custom-select" required>
+                    <option value="teste">Two</option>
+                    <option *ngFor="let option of component.formRender[item].options" [value]="option.value"
+                        [selected]="baseOptionSelected(item, option)">
+                        {{option.label}}
+                    </option>
+                </select>
+            </ng-container>
+        </div>
+    </div>
+    <div class="card-footer border-0 bg-white">
+        <div class="row mt-5">
+            <div class="col-4">
+                <div class="text-right">
+                    <button [disabled]="!component.form.valid" type="submit" class="btn btn-info"
+                        (click)="baseSubmit()">
+                        Salvar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

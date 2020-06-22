@@ -10,6 +10,7 @@ import { AdminComponent } from './admin.component';
 import { AdminFooterComponent } from './components/footer/footer.component';
 import { AdminNavbarComponent } from './components/navbar/navbar.component';
 import { AdminSidebarComponent } from './components/sidebar/sidebar.component';
+import { AdminItemComponent } from './components/item/item.component';
 
 // Pages
 import { AdminBalladPage } from './pages/ballad/ballad.page';
@@ -46,6 +47,7 @@ const routes: Routes = [
 export const AdminComponents = [
     AdminComponent,
     AdminFooterComponent,
+    AdminItemComponent,
     AdminNavbarComponent,
     AdminSidebarComponent,
 ]
