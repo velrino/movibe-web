@@ -7,11 +7,12 @@
             </div>
         </div>
         <ul class="nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">
-                    <i class="nc-icon nc-chart-pie-35"></i>
-                    <p>Dashboard</p>
-                </a>
+            <li class="nav-item clickable" *ngFor="let item of menu" (click)="navigate(item.route)"
+                [ngClass]="{'active': isActualPath(item.route)}">
+                <div class="nav-link">
+                    <i class="{{item.icon}}"></i>
+                    <p>{{item.name}}</p>
+                </div>
             </li>
             <li class="nav-item active active-pro" (click)="logout()">
                 <div class="nav-link active clickable">
