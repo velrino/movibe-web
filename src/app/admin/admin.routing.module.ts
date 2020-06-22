@@ -27,7 +27,8 @@ const routes: Routes = [
             {
                 path: 'ballads', children: [
                     { path: '', component: AdminBalladsPage },
-                    { path: ':id', component: AdminBalladPage },
+                    { path: 'create', component: AdminBalladPage },
+                    { path: 'edit/:id', component: AdminBalladPage },
                 ]
             },
         ]

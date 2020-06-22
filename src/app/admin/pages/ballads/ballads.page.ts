@@ -38,6 +38,10 @@ export class AdminBalladsPage extends ListComponent implements OnInit {
     this.baseGoToEditPage();
   }
 
+  openDeleteModal(id: string) {
+    console.log(id)
+  }
+
   delete() {
     this.routes.api.delete = `ballads/${this.dataItemId}`;
     this.baseDelete();

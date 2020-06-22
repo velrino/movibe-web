@@ -7,7 +7,8 @@
                         <input type="text" class="form-control" placeholder="Search">
                     </div>
                     <div class="col-2 text-right">
-                        <button class="btn btn-primary mb-2 btn-block">Add</button>
+                        <button class="btn btn-primary mb-2 btn-block clickable"
+                            (click)="baseGoToCreatePage()">Add</button>
                     </div>
                 </div>
             </div>
@@ -23,10 +24,11 @@
                         <tr *ngFor="let item of data">
                             <td *ngFor="let index of baseColumnsToArray()" class="truncate-line">{{item[index]}}</td>
                             <td class="w-10">
-                                <button type="button" class="btn btn-success clickable mr-2">
+                                <button type="button" class="btn btn-success clickable mr-2" (click)="edit(item.slug)">
                                     <i class="fa fa-pencil-alt" aria-hidden="true"></i>
                                 </button>
-                                <button type="button" class="btn btn-danger clickable ml-2">
+                                <button type="button" class="btn btn-danger clickable ml-2"
+                                    (click)="openDeleteModal(item.slug)">
                                     <i class="fa fa-trash" aria-hidden="true"></i>
                                 </button>
                             </td>
