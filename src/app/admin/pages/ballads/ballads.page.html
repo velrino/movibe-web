@@ -16,13 +16,16 @@
                     <thead>
                         <tr>
                             <th *ngFor="let index of baseColumnsToArray()">{{baseGetColumn(index)}}</th>
-                            <th>Ações</th>
+                            <th class="w-10">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let item of data">
-                            <td *ngFor="let index of baseColumnsToArray()">{{item[index]}}</td>
-                            <td>Niger</td>
+                            <td *ngFor="let index of baseColumnsToArray()" class="truncate-line">{{item[index]}}</td>
+                            <td class="w-10">
+                                <button type="button" class="btn btn-success">Success</button>
+                                <button type="button" class="btn btn-danger">Danger</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

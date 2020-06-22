@@ -1,3 +1,21 @@
 .clickable {
     cursor: pointer;
 }
+
+table {
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+.w-10 {
+    max-width: 10% !important;
+    min-width: 10% !important;
+    width: 10% !important;
+}
+
+.truncate-line {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 1px;
+}

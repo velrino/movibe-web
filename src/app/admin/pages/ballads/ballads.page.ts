@@ -13,6 +13,9 @@ export class AdminBalladsPage extends ListComponent implements OnInit {
     cnpj: 'CNPJ',
     name: 'Nome',
     slug: 'Apelido',
+    responsibleName: "Responsável",
+    telephoneNumber: "Telefone",
+    email: "E-mail",
   }
 
   constructor(_apiService: ApiService) {
